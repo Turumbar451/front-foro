@@ -1,0 +1,34 @@
+---
+import "../styles/global.css";
+import Navbar from '../components/ui/Navbar.svelte';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Blog Comunitario" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-base-200 min-h-screen flex flex-col">
+		<Navbar client:load />
+
+		<main class="container mx-auto px-4 flex">
+			<slot />
+		</main>
+
+        <footer >
+        
+        </footer>
+	</body>
+</html>

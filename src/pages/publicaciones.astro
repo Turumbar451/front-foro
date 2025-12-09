@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Feed from '../components/blog/Feed.svelte';
+---
+
+<Layout title="Muro Público">
+    <div class="max-w-3xl mx-auto mb-6 flex justify-between items-center">
+        <h1 class="text-3xl font-bold">ultimas Publicaciones</h1>
+        <a href="/crear" class="btn btn-primary btn-sm">+ Nuevo Post</a>
+    </div>
+
+    <Feed client:load />
+</Layout>
