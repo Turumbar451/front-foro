@@ -12,18 +12,7 @@ export default defineConfig({
   output: 'server', //indicamos que usaremos un server para desplegar
   integrations: [svelte(), tailwind()],
 
-  vite: {
-    server: {
-      host: true,
-      allowedHosts: ['*'],
-    },
-    preview: {
 
-      allowedHosts: ['*'],
-      host: true,
-
-    }
-  },
 
   adapter: node({
     mode: 'standalone'

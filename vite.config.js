@@ -6,4 +6,8 @@ export default defineConfig({
 
         allowedHosts: ['*'],
     },
+    server: {
+        host: true,
+        allowedHosts: ['*'],
+    }
 });
