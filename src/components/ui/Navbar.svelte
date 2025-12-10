@@ -22,7 +22,7 @@
   <div class="container mx-auto px-6 flex justify-between items-center w-full">
 
     <a href="/" class="text-3xl font-black text-blue-900 hover:opacity-80 decoration-none">
-      🎓 Blog Escolar
+      Blog Escolar
     </a>
 
     <div class="flex items-center gap-6">

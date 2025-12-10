@@ -1,8 +1,6 @@
 # imagen oficial de node para consturir la app
 FROM node:20-alpine AS build
 
-
-
 #directorio dentro del contenedor
 WORKDIR /app
 
