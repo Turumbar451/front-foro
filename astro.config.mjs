@@ -1,11 +1,9 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-
 import svelte from '@astrojs/svelte';
-
 import tailwind from '@astrojs/tailwind';
-
 import node from '@astrojs/node';
+
 const ALLOWED_HOSTS = [
   'localhost',
   '127.0.0.1',
@@ -16,31 +14,9 @@ const ALLOWED_HOSTS = [
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
-  integrations: [svelte(), tailwind()],
-
-  vite: {
-    preview: {
-      host: true,
-      port: 4321,
-      allowedHosts: ALLOWED_HOSTS,
-    },
-
-
-    server: {
-      host: true,
-      port: 4321,
-      allowedHosts: ALLOWED_HOSTS,
-
-      hmr: {
-        host: 'localhost',
-        protocol: 'ws',
-        clientPort: 4321
-      }
-    }
+  integrations: [tailwind()],
+  server: {
+    host: '0.0.0.0',
+    port: Number(process.env.PORT ?? 4321),
   },
-
-  adapter: node({
-    mode: 'standalone'
-  })
 });
