@@ -12,6 +12,20 @@ export default defineConfig({
   output: 'server', //indicamos que usaremos un server para desplegar
   integrations: [svelte(), tailwind()],
 
+  vite: {
+    preview: {
+      host: true,
+      allowedHosts: ['*'],
+    },
+
+    server: {
+      hmr: {
+        host: 'localhost',
+        protocol: 'ws',
+        clientPort: 4321
+      }
+    }
+  },
 
 
   adapter: node({
