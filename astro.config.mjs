@@ -20,10 +20,17 @@ export default defineConfig({
     preview: {
       // configurar los hosts permitidos para el preview
       allowedHosts: [
-        HOST_WITHOUT_PROTOCOL,
+        'front-foro-production.up.railway.app',
         'localhost',
-        '127.0.0.1'
+        '127.0.0.1',
+        '0.0.0.0',
+        'railway.app',
+        '*.railway.app',
+        '*' //permite todos los hosts
       ],
+      // forzar host y puerto
+      host: true,
+      port: 4321
     }
   },
 
