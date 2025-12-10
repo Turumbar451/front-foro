@@ -13,6 +13,10 @@ export default defineConfig({
   integrations: [svelte(), tailwind()],
 
   vite: {
+    server: {
+      host: true,
+      allowedHosts: ['*'],
+    },
     preview: {
 
       allowedHosts: ['*'],
