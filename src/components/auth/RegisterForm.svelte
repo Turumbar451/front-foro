@@ -44,7 +44,7 @@
       <p class="text-gray-500 text-lg">Únete a la comunidad universitaria</p>
     </div>
 
-    {#if error} <div class="alert alert-error text-white shadow-md mb-4">{error}</div> {/if}
+    {#if error} <div class="alert alert-error text-black shadow-md mb-4">{error}</div> {/if}
 
     <form on:submit|preventDefault={handleRegister} class="flex flex-col gap-5">
         
@@ -69,7 +69,7 @@
             <input id="reg-pass" type="password" bind:value={password} placeholder="••••••••" class="input input-bordered input-lg w-full bg-gray-50 text-lg" required />
         </div>
 
-        <button type="submit" class="btn btn-primary text-white btn-lg w-full shadow-lg mt-4 text-xl font-bold border-none" disabled={isLoading}>
+        <button type="submit" class="btn btn-primary text-black btn-lg w-full shadow-lg mt-4 text-xl font-bold border-none" disabled={isLoading}>
           {#if isLoading} <span class="loading loading-spinner"></span> {/if}
           Registrarse
         </button>

@@ -44,7 +44,7 @@
     </div>
     
     {#if error}
-        <div class="alert alert-error text-white shadow-md mb-4 font-semibold">
+        <div class="alert alert-error text-black shadow-md mb-4 font-semibold">
           <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
           <span>{error}</span>
         </div>
@@ -80,7 +80,7 @@
             />
         </div>
 
-        <button type="submit" class="btn btn-primary text-white btn-lg w-full shadow-lg mt-2 text-xl font-bold border-none" disabled={isLoading}>
+        <button type="submit" class="btn btn-primary text-black btn-lg w-full shadow-lg mt-2 text-xl font-bold border-none" disabled={isLoading}>
           {#if isLoading} <span class="loading loading-spinner"></span> {/if}
           Ingresar
         </button>
