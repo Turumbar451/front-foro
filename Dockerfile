@@ -1,5 +1,5 @@
 # imagen oficial de node para consturir la app
-FROM node:20-alpine AS build
+FROM node:18-alpine AS build
 
 
 
@@ -19,7 +19,7 @@ COPY . .
 RUN npm run build
 
 # usar la imagen node para produccion
-FROM node:20-alpine AS production
+FROM node:18-alpine AS production
 
 # directorio de trabajo
 WORKDIR /app

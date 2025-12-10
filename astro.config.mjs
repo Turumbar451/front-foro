@@ -6,13 +6,7 @@ import svelte from '@astrojs/svelte';
 import tailwind from '@astrojs/tailwind';
 
 import node from '@astrojs/node';
-const ALLOWED_HOSTS = [
-  'localhost',
-  '127.0.0.1',
-  'front-foro-production.up.railway.app',
-  'front-foro.onrender.com',
-  '*',
-];
+
 
 export default defineConfig({
   output: 'server',
@@ -22,12 +16,10 @@ export default defineConfig({
     preview: {
       host: true,
       port: 4321,
-      allowedHosts: ALLOWED_HOSTS,
     },
     server: {
       host: true,
       port: 4321,
-      allowedHosts: ALLOWED_HOSTS,
       hmr: {
         host: 'localhost',
         protocol: 'ws',
