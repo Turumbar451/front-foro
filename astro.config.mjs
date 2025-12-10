@@ -13,17 +13,23 @@ export default defineConfig({
   integrations: [svelte(), tailwind()],
 
   vite: {
-    preview: {
-      host: true,
-      allowedHosts: ['*'],
-    },
-
     server: {
-      hmr: {
-        host: 'localhost',
-        protocol: 'ws',
-        clientPort: 4321
-      }
+      allowedHosts: [
+        'front-foro-production.up.railway.app',
+        'localhost',
+        '127.0.0.1',
+        '*'
+      ],
+    },
+    preview: {
+      allowedHosts: [
+        'front-foro-production.up.railway.app',
+        'localhost',
+        '127.0.0.1',
+        '*'
+      ],
+      host: true,
+      port: 4321
     }
   },
 
