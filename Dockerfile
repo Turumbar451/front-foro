@@ -37,4 +37,4 @@ COPY package.json ./
 EXPOSE 4321 
 
 # comandos de inicio
-CMD ["npm", "start"]
+CMD ["npm", "start", "preview"]
