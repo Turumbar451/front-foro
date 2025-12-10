@@ -1,0 +1,11 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PostDetail from '../../components/blog/PostDetail.svelte';
+
+// obtener id de la URL
+const { id } = Astro.params;
+---
+
+<Layout title="Detalle de Publicación">
+    <PostDetail client:load id={id} />
+</Layout>

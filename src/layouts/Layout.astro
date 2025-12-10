@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Navbar from '../components/ui/Navbar.svelte';
+import { Toaster } from 'svelte-sonner'; 
 
 interface Props {
 	title: string;
@@ -11,7 +12,7 @@ const { title, description = "Blog Comunitario" } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="mytheme">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
@@ -20,15 +21,27 @@ const { title, description = "Blog Comunitario" } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-base-200 min-h-screen flex flex-col">
+	<body class="bg-base-100 min-h-screen flex flex-col text-base-content">
+		
 		<Navbar client:load />
 
-		<main class="container mx-auto px-4 flex">
+		<main class="container mx-auto px-4 flex-grow w-full max-w-5xl">
 			<slot />
 		</main>
 
-        <footer >
-        
+        <Toaster 
+		client:idle 
+    richColors 
+    position="bottom-right" 
+    toastOptions={{
+        style: "padding: 1.5rem; font-size: 1.1rem; min-width: 450px; border: 2px solid #bfdbfe;",
+        class: "shadow-2xl font-bold"
+    }} />
+
+        <footer class="footer footer-center p-4 bg-base-200 text-base-content mt-10">
+            <aside>
+                <p>Copyright © 2025 - Blog Escolar</p>
+            </aside>
         </footer>
 	</body>
 </html>

@@ -4,10 +4,23 @@ import Feed from '../components/blog/Feed.svelte';
 ---
 
 <Layout title="Muro Público">
-    <div class="max-w-3xl mx-auto mb-6 flex justify-between items-center">
-        <h1 class="text-3xl font-bold">ultimas Publicaciones</h1>
-        <a href="/crear" class="btn btn-primary btn-sm">+ Nuevo Post</a>
-    </div>
+    <div class="max-w-4xl mx-auto mt-12 mb-10">
+        
+        <div class="flex justify-between items-end border-b-2 border-blue-100 pb-4 mb-8">
+            <div>
+                <h1 class="text-5xl font-black text-blue-900 tracking-tight">
+                    Muro Público
+                </h1>
+                <p class="text-gray-500 mt-2 text-lg">
+                    Explora lo que la comunidad está compartiendo
+                </p>
+            </div>
 
-    <Feed client:load />
+            <a href="/crear" class="btn btn-primary text-white shadow-lg btn-md">
+                + Crear Nuevo
+            </a>
+        </div>
+
+        <Feed client:load />
+    </div>
 </Layout>

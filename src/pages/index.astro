@@ -1,17 +1,54 @@
 ---
-import Layout from '../layouts/Layout.astro'; 
+import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Inicio | Mi E-commerce">
-	<main class="container mx-auto p-4">
-		<h1 class="text-4xl font-bold text-center my-10">
-			hola
-		</h1>
-		
-		<div class="p-6 border rounded-lg shadow-md">
-			<p>prueba</p>
-		</div>
+<Layout title="Presentación del Proyecto">
+  <div class="hero min-h-[85vh] bg-base-100 flex items-center justify-center">
+    <div class="max-w-4xl w-full text-center">
+      
+      <div class="mb-8">
+        <h2 class="text-3xl font-bold text-gray-500 uppercase tracking-widest mb-2">Universidad Veracruzana</h2>
+        <div class="h-1 w-24 bg-blue-600 mx-auto"></div>
+      </div>
 
-		
-	</main>
+      <h1 class="text-6xl font-black text-blue-900 mb-4">
+        Proyecto "Foro"
+      </h1>
+      <p class="text-2xl text-blue-800 font-light mb-12">
+        Materia: <span class="font-bold">Desarrollo Web</span> • 5to Semestre
+      </p>
+
+      <div class="card bg-blue-50 border border-blue-100 shadow-lg mx-auto max-w-2xl mb-12">
+        <div class="card-body">
+          <h3 class="card-title justify-center text-xl text-blue-900 border-b border-blue-200 pb-2 mb-4">
+            Integrantes del Equipo
+          </h3>
+          <ul class="space-y-3 text-lg text-left inline-block mx-auto">
+            <li class="flex items-center gap-3">
+              <span class="text-blue-500">➤</span> 
+              <span class="font-medium text-gray-700">Emir Tirso Badillo</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-blue-500">➤</span> 
+              <span class="font-medium text-gray-700">Guillermo Gongora Mendoza</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-blue-500">➤</span> 
+              <span class="font-medium text-gray-700">Luis Morales Ochoa</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center gap-4">
+        <a href="/publicaciones" class="btn btn-primary btn-lg text-white shadow-xl px-10 text-xl border-none hover:scale-105 transition-transform">
+          Entrar al Foro
+        </a>
+        <p class="text-sm text-gray-400 mt-2">
+          Stack: Astro • Svelte • Spring Boot • Docker • MongoDB
+        </p>
+      </div>
+
+    </div>
+  </div>
 </Layout>

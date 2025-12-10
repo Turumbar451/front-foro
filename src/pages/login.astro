@@ -1,5 +1,10 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
+import LoginForm from '../components/auth/LoginForm.svelte';
 ---
 
-<Layout title="Ingresar"><h1 class="text-2xl">Pagina de Login</h1></Layout>
+<Layout title="Ingresar">
+    <div class="min-h-[85vh] flex items-center justify-center bg-blue-50/50 py-10">
+        <LoginForm client:load />
+    </div>
+</Layout>

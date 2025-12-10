@@ -1,0 +1,11 @@
+---
+import EditForm from '../../../components/blog/EditForm.svelte';
+import Layout from '../../../layouts/Layout.astro';
+
+const { id } = Astro.params;
+
+---
+
+<Layout title="Editar Publicación">
+    <EditForm client:load id={id} />
+</Layout>
