@@ -11,10 +11,9 @@ const ALLOWED_HOSTS = [
   '127.0.0.1',
   'front-foro-production.up.railway.app',
   'front-foro.onrender.com',
-  '*', // El comodín universal como último recurso
+  '*',
 ];
 
-// https://astro.build/config
 export default defineConfig({
   output: 'server',
   integrations: [svelte(), tailwind()],
@@ -25,13 +24,10 @@ export default defineConfig({
       port: 4321,
       allowedHosts: ALLOWED_HOSTS,
     },
-
-
     server: {
       host: true,
       port: 4321,
       allowedHosts: ALLOWED_HOSTS,
-
       hmr: {
         host: 'localhost',
         protocol: 'ws',
