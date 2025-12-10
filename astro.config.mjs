@@ -14,8 +14,8 @@ export default defineConfig({
 
   vite: {
     preview: {
-      // configurar los hosts permitidos para el preview
-      allowedHosts: true,
+
+      allowedHosts: ['front-foro-production.up.railway.app'],
 
     }
   },
