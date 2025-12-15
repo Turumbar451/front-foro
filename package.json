@@ -10,6 +10,7 @@
     "start": "astro preview --host 0.0.0.0 --port 4321"
   },
   "dependencies": {
+    "@astrojs/netlify": "^6.6.3",
     "@astrojs/node": "^9.5.1",
     "@astrojs/svelte": "^7.2.2",
     "astro": "^5.16.4",
